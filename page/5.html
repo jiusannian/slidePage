@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+    <!--自适应界面,如果出现,在某些设备出现界面偏小的话,检查一下有没有加入这句 -->
+	<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    
+<title>设置管理</title>
+
+<link rel="stylesheet" href="../css/base5.css" />
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+    $(".top img").click(function(event){
+        event.stopPropagation();
+        $("#page5").animate({
+            'left':"80%"
+        },800);
+        $("#menu").animate({
+            'left':"0"
+        },800);
+    })
+    $("#page5").click(function(event){
+        event.stopPropagation();
+        $("#page5").animate({
+            'left':"0"
+        },800);
+        $("#menu").animate({
+            'left':"-80%"
+        },800);
+    })
+})
+</script>
+</head>
+	
+<body>
+    <div id="page5">
+        <div class="top"><img src="../images/menu.png"><span>设置管理</span></div>
+        <div class="top_title">
+            <ul>
+                <li class="li1"><a href="">资质认证</a><img src="../images/right.png"></li>
+                <li class="li1"><a href="">密码管理</a><img src="../images/right.png"></li>
+            </ul>
+            <ul>
+                <li class="li2"><a href="">使用帮助</a><img src="../images/right.png"></li>
+                <li class="li2"><a href="">版本更新(已是最新版本)</a><img src="../images/right.png"></li>
+                <li class="li2"><a href="">关注三维度</a><img src="../images/right.png"></li>
+                <li class="li2"><a href="">关于我们</a><img src="../images/right.png"></li>
+            </ul>
+        </div>
+    </div>
+    <nav id="menu">
+        <div class="info">
+            <div class="pic"><img src="../images/1.jpg"></div>
+            <p id="user">天使也一样</p>
+            <span id="user_num">1234567890</span>
+        </div>
+        <ul>
+            <li><img src="../images/charge.png"><a href="3.html">手机收款</a></li>
+            <li><img src="../images/life.png"><a href="4.html">广场生活</a></li>
+            <li><img src="../images/setting.png"><a href="" class="active">设置管理</a></li>
+            <li><img src="../images/exit.png"><a href="">退出登录</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

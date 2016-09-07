@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+    <!--自适应界面,如果出现,在某些设备出现界面偏小的话,检查一下有没有加入这句 -->
+	<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<title>手机收款</title>
+
+<link rel="stylesheet" href="../css/base3.css" />
+<link rel="stylesheet" href="../css/font.css" />
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+    $(".top img").click(function(event){
+        event.stopPropagation();
+        $("#page3").animate({
+            'left':"80%",
+            'opacity':0.5
+        },800);
+        $("#menu").animate({
+            'left':"0"
+        },800);
+    })
+    $("#page3").click(function(event){
+        event.stopPropagation();
+        $("#page3").animate({
+            'left':"0",
+            'opacity':1
+        },800);
+        $("#menu").animate({
+            'left':"-80%"
+        },800);
+    })
+})
+</script>
+</head>
+	
+<body>
+    <div id="page3">
+        <div class="top"><img src="../images/menu.png"><span>手机收款</span></div>
+        
+        <div class="top_title">
+            <div class="shurukuang">
+                <input class="zhanghao" type="text" placeholder="收款通账号/手机号码">
+                <div class="line"></div>
+                <input class="jine" type="text" placeholder="收款金额">
+                <img class="juchi" src="../images/juchi.png">
+            </div>
+            <input class="num" type="text" value="0">
+            <div class="content">
+                <ul class="ul1">
+                    <li class="li1"><a href="">1</a></li>
+                    <li class="li1"><a href="">2</a></li>
+                    <li class="li1"><a href="">3</a></li>
+                    <li class="li1"><a href="">4</a></li>
+                    <li class="li1"><a href="">5</a></li>
+                    <li class="li1"><a href="">6</a></li>
+                    <li class="li1"><a href="">7</a></li>
+                    <li class="li1"><a href="">8</a></li>
+                    <li class="li1"><a href="">9</a></li>
+                </ul>
+                <ul class="ul2">
+                    <li class="li2"><a href="">清除</a></li>
+                    <li class="li2"><a href=""><img src="../images/clear.png"></a></li>
+                    <li class="li2"><a href=""><img src="../images/fate.png">收款</a></li>
+                </ul>
+            <ul class="ul3">
+                <li class="li3"><a href="">0</a></li>
+                <li class="li3"><a href="">.</a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    <nav id="menu">
+        <div class="info">
+            <div class="pic"><img src="../images/1.jpg"></div>
+            <p id="user">天使也一样</p>
+            <span id="user_num">1234567890</span>
+        </div>
+        <ul>
+            <li><img src="../images/charge.png"><a href="" class="active">手机收款</a></li>
+            <li><img src="../images/life.png"><a href="4.html">广场生活</a></li>
+            <li><img src="../images/setting.png"><a href="5.html">设置管理</a></li>
+            <li><img src="../images/exit.png"><a href="">退出登录</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

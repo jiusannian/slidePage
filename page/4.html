@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+    <!--自适应界面,如果出现,在某些设备出现界面偏小的话,检查一下有没有加入这句 -->
+	<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    
+<title>广场生活</title>
+
+<link rel="stylesheet" href="../css/base4.css" />
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+    $(".top img").click(function(event){
+        event.stopPropagation();
+        $("#page4").animate({
+            'left':"80%"
+        },800);
+        $("#menu").animate({
+            'left':"0"
+        },800);
+    })
+    $("#page4").click(function(event){
+        event.stopPropagation();
+        $("#page4").animate({
+            'left':"0"
+        },800);
+        $("#menu").animate({
+            'left':"-80%"
+        },800);
+    })
+})
+</script>
+</head>
+	
+<body>
+    <div id="page4">
+        <div class="top"><img src="../images/menu.png"><span>广场生活</span></div>
+        <img id="bg" src="../images/bg.png">
+        <div class="top_title">
+            <ul>
+                <li class="li1"><img src="../images/card.png"><a href="">信用卡还款</a></li>
+                <li class="li1"><img src="../images/forward.png"><a href="">转账</a></li>
+                <li class="li1"><img src="../images/business.png"><a href="">交易</a></li>
+                <li class="li1"><img src="../images/money.png"><a href="">余额</a></li>
+                <li class="li1"><img src="../images/recharge.png"><a href="">手机充值</a></li>
+                <li class="li1"><img src="../images/favorite.png"><a href="">收藏</a></li>
+                <li class="li1"><img src="../images/scan.png"><a href="">扫一扫</a></li>
+                <li class="li1"><img src="../images/more.png"><a href="">更多</a></li>
+            </ul>
+        </div>
+    </div>
+    <nav id="menu">
+        <div class="info">
+            <div class="pic"><img src="../images/1.jpg"></div>
+            <p id="user">天使也一样</p>
+            <span id="user_num">1234567890</span>
+        </div>
+        <ul>
+            <li><img src="../images/charge.png"><a href="3.html">手机收款</a></li>
+            <li><img src="../images/life.png"><a href="" class="active">广场生活</a></li>
+            <li><img src="../images/setting.png"><a href="5.html">设置管理</a></li>
+            <li><img src="../images/exit.png"><a href="">退出登录</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
